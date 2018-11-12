@@ -149,33 +149,18 @@ public class BSOQAKPIServiceImpl extends CommonHistoryServiceDAO<BSOQAKPIKey, BS
 
   }
 	
-	
-	
-	
-public void sendReplyBySender( String replySubject, Document doc, Element element, String senderName ) throws Exception
+public void sendReplyBySender( String replySubject, Document doc, String senderName ) throws Exception
 	{
+
 		String sReplyMsg = null;
+		
+		//Set Result Message		
 		MessageUtil.setResultItemValue( doc, MessageUtil.Result_ReturnCode, SUCCESS );
 		MessageUtil.setResultItemValue( doc, MessageUtil.Result_ErrorMessage, StringUtils.EMPTY );
-		String XPathResult = ConstantManager.Basic.Double_Slash + MessageUtil.Message_Tag + ConstantManager.Basic.Slash + MessageUtil.Body_Tag;
 
-		if ( element != null )
-		{
-			JdomUtils.getNode( doc, XPathResult ).addContent( element );
-		}
 
+		//Send Reply
 		sReplyMsg = JdomUtils.toString( doc );
-
 		GenericServiceProxy.getGenericSender( senderName ).setDataField( MessageUtil.DataFieldNameXmlData );
 		GenericServiceProxy.getGenericSender( senderName ).reply( replySubject, sReplyMsg );
-
-		log.info( ConstantManager.ObjectAttribute.SendSubject + replySubject );
-
-		String msgName = StringUtils.EMPTY;
-		try
-		{
-			msgName = JdomUtils.getNodeText( doc, ConstantManager.ObjectAttribute.MESSAGENAME_URL );
-		}
-		catch ( Exception e )
-		{}
 	}
