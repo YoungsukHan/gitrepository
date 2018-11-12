@@ -31,33 +31,33 @@ public class BSOQAKPIServiceImpl extends CommonHistoryServiceDAO<BSOQAKPIKey, BS
       for (Element temp : ElementList) {
         // Extract variable value from message.
         
-				String  memberNo = temp.getChildText( "MEMBERNO" );
-				String  inputDate = temp.getChildText( "INPUTDATE" );
-			
-			    
-				double  kpiTargetVal = convertChildTextToDouble(temp.getChildText( "KPITARGETVAL" ));
-				double  kpiOutputVal = convertChildTextToDouble(temp.getChildText( "KPIOUTPUTVAL" ));
-				double  kpiAchievementRate = convertChildTextToDouble(temp.getChildText( "KPIACHIEVEMENTRATE" ));
-				double  kpiDetect = convertChildTextToDouble(temp.getChildText( "KPIDETECT" ));
-				double  kpiDppm = convertChildTextToDouble(temp.getChildText( "KPIDPPM" ));
-				double  kpiTotalVal = convertChildTextToDouble(temp.getChildText( "KPITOTALVAL" ));
-				String  commuteNormalYN = temp.getChildText( "COMMUTENORMALYN" );
-				String  commuteUnusualType = temp.getChildText( "COMMUTEUNUSUALTYPE" );
-				double  commuteTotalVal = convertChildTextToDouble(temp.getChildText( "COMMUTETOTALVAL" ));
-				String  detailKpiParam1 = temp.getChildText( "DETAILKPIPARAM1" );
-				String  detailKpiParam2 = temp.getChildText( "DETAILKPIPARAM2" );
-				String  detailKpiParam3 = temp.getChildText( "DETAILKPIPARAM3" );
-				String  detailKpiParam4 = temp.getChildText( "DETAILKPIPARAM4" );
-				String  detailKpiParam5 = temp.getChildText( "DETAILKPIPARAM5" );
-				String  detailKpiParam6 = temp.getChildText( "DETAILKPIPARAM6" );
-				String  detailKpiParam7 = temp.getChildText( "DETAILKPIPARAM7" );
-				String  detailKpiParam8 = temp.getChildText( "DETAILKPIPARAM8" );
-				String  detailKpiParam9 = temp.getChildText( "DETAILKPIPARAM9" );
-				double  detailKpiTotalVal = convertChildTextToDouble(temp.getChildText( "DETAILKPITOTALVAL" ));
-				String  plusReason = temp.getChildText( "PLUSREASON" );
-				double  plusVal = convertChildTextToDouble(temp.getChildText( "PLUSVAL" ));
-				double  plusTotalVal = convertChildTextToDouble(temp.getChildText( "PLUSTOTALVAL" ));
-			  String  ttl = temp.getChildText( "TTL" );
+	String  memberNo = temp.getChildText( "MEMBERNO" );
+	String  inputDate = temp.getChildText( "INPUTDATE" );
+
+
+	double  kpiTargetVal = convertChildTextToDouble(temp.getChildText( "KPITARGETVAL" ));
+	double  kpiOutputVal = convertChildTextToDouble(temp.getChildText( "KPIOUTPUTVAL" ));
+	double  kpiAchievementRate = convertChildTextToDouble(temp.getChildText( "KPIACHIEVEMENTRATE" ));
+	double  kpiDetect = convertChildTextToDouble(temp.getChildText( "KPIDETECT" ));
+	double  kpiDppm = convertChildTextToDouble(temp.getChildText( "KPIDPPM" ));
+	double  kpiTotalVal = convertChildTextToDouble(temp.getChildText( "KPITOTALVAL" ));
+	String  commuteNormalYN = temp.getChildText( "COMMUTENORMALYN" );
+	String  commuteUnusualType = temp.getChildText( "COMMUTEUNUSUALTYPE" );
+	double  commuteTotalVal = convertChildTextToDouble(temp.getChildText( "COMMUTETOTALVAL" ));
+	String  detailKpiParam1 = temp.getChildText( "DETAILKPIPARAM1" );
+	String  detailKpiParam2 = temp.getChildText( "DETAILKPIPARAM2" );
+	String  detailKpiParam3 = temp.getChildText( "DETAILKPIPARAM3" );
+	String  detailKpiParam4 = temp.getChildText( "DETAILKPIPARAM4" );
+	String  detailKpiParam5 = temp.getChildText( "DETAILKPIPARAM5" );
+	String  detailKpiParam6 = temp.getChildText( "DETAILKPIPARAM6" );
+	String  detailKpiParam7 = temp.getChildText( "DETAILKPIPARAM7" );
+	String  detailKpiParam8 = temp.getChildText( "DETAILKPIPARAM8" );
+	String  detailKpiParam9 = temp.getChildText( "DETAILKPIPARAM9" );
+	double  detailKpiTotalVal = convertChildTextToDouble(temp.getChildText( "DETAILKPITOTALVAL" ));
+	String  plusReason = temp.getChildText( "PLUSREASON" );
+	double  plusVal = convertChildTextToDouble(temp.getChildText( "PLUSVAL" ));
+	double  plusTotalVal = convertChildTextToDouble(temp.getChildText( "PLUSTOTALVAL" ));
+	String  ttl = temp.getChildText( "TTL" );
 
 
 
